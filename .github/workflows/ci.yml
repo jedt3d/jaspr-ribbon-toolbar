@@ -1,0 +1,36 @@
+name: CI
+
+# Runs on every push to main and every PR.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dart-lang/setup-dart@v1
+
+      - name: Resolve dependencies
+        run: dart pub get
+
+      - name: Format check
+        run: dart format --output=none --set-exit-if-changed packages apps tutorial
+
+      - name: Analyze
+        run: dart analyze packages apps tutorial --fatal-infos
+
+      - name: Test — toolbar
+        run: dart test
+        working-directory: packages/jaspr_ribbon_toolbar
+
+      - name: Test — LSP
+        run: dart test
+        working-directory: packages/jaspr_ribbon_lsp
+
+      - name: Test — designer logic
+        run: dart test
+        working-directory: apps/jaspr_ribbon_designer

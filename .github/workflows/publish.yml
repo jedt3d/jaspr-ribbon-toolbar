@@ -1,0 +1,28 @@
+name: Publish to pub.dev
+
+# Triggers when you push a tag like v0.5.0, v0.6.0, v1.0.0-dev.1
+# or manually from the Actions tab.
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    permissions:
+      id-token: write  # Required for OIDC token exchange with pub.dev
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dart-lang/setup-dart@v1
+        with:
+          oidc: true  # OIDC-based auth — no PUB_TOKEN secret needed
+
+      - name: Resolve dependencies
+        run: dart pub get
+
+      - name: Publish
+        run: dart pub publish --force
+        working-directory: packages/jaspr_ribbon_toolbar
