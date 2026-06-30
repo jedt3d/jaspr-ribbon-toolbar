@@ -1,0 +1,51 @@
+{
+  "version": "2.0",
+  "projectType": "web",
+  "tabs": [
+    {
+      "caption": "Home",
+      "groups": [
+        {
+          "caption": "Clipboard",
+          "items": [
+            {
+              "caption": "Paste",
+              "tag": "clipboard.paste",
+              "itemType": "large",
+              "isEnabled": true,
+              "iconKey": "paste"
+            },
+            {
+              "caption": "Cut",
+              "tag": "clipboard.cut",
+              "itemType": "small",
+              "isEnabled": true,
+              "iconKey": "cut"
+            },
+            {
+              "caption": "Copy",
+              "tag": "clipboard.copy",
+              "itemType": "small",
+              "isEnabled": true,
+              "iconKey": "copy"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "icons": {
+    "paste": {
+      "kind": "svg",
+      "data": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNDQ0IiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cmVjdCB4PSI2IiB5PSI0IiB3aWR0aD0iMTIiIGhlaWdodD0iMTciIHJ4PSIyIi8+PHBhdGggZD0iTTkgNFYyLjVoNlY0Ii8+PHBhdGggZD0iTTkgMTFoNk05IDE1aDQiLz48L3N2Zz4K"
+    },
+    "cut": {
+      "kind": "svg",
+      "data": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNDQ0IiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48Y2lyY2xlIGN4PSI2IiBjeT0iNiIgcj0iMi40Ii8+PGNpcmNsZSBjeD0iNiIgY3k9IjE4IiByPSIyLjQiLz48cGF0aCBkPSJNOCA3LjZMMjAgMTdNOCAxNi40TDIwIDciLz48L3N2Zz4K"
+    },
+    "copy": {
+      "kind": "svg",
+      "data": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNDQ0IiBzdHJva2Utd2lkdGg9IjEuNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cmVjdCB4PSI4IiB5PSIzIiB3aWR0aD0iMTEiIGhlaWdodD0iMTUiIHJ4PSIyIi8+PHBhdGggZD0iTTggNkg1LjVBMS41IDEuNSAwIDAgMCA0IDcuNXYxM0ExLjUgMS41IDAgMCAwIDUuNSAyMmg4YTEuNSAxLjUgMCAwIDAgMS41LTEuNVYxOSIvPjxwYXRoIGQ9Ik0xMSA5aDVNMTEgMTNoNSIvPjwvc3ZnPgo="
+    }
+  }
+}

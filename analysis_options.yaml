@@ -1,0 +1,33 @@
+# Root analysis options for the jaspr-ribbon-toolbar workspace.
+#
+# Jaspr provides lints + code assists via the `jaspr_lints` analysis plugin
+# (see https://docs.jaspr.site/api/linting). Members inherit these via their
+# own `analysis_options.yaml` that `include: package:jaspr_lints/package.yaml`.
+plugins:
+  jaspr_lints:
+    version: ^0.7.1
+    diagnostics:
+      sort_children_last: true
+      prefer_html_components: true
+      styles_ordering: true
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+  errors:
+    # Treat the harness gate as binary: anything below ignore must pass.
+    todo: ignore
+  exclude:
+    - "**/.dart_tool/**"
+    - "**/build/**"
+
+linter:
+  rules:
+    - always_declare_return_types
+    - avoid_print
+    - prefer_const_constructors
+    - prefer_final_locals
+    - prefer_single_quotes
+    - require_trailing_commas

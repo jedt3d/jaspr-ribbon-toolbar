@@ -1,0 +1,13 @@
+# Test platform configuration for the workspace.
+# `testComponents` (VM) and `testClient` (browser) from package:jaspr_test both work.
+platforms:
+  - vm
+  - chrome
+
+override_platforms:
+  chrome:
+    settings:
+      headless: true
+
+verbose_trace: false
+js_trace: false

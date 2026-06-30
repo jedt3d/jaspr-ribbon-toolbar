@@ -1,0 +1,81 @@
+{
+  "version": "2.0",
+  "projectType": "web",
+  "tabs": [
+    {
+      "caption": "Home",
+      "groups": [
+        {
+          "caption": "Clipboard",
+          "items": [
+            { "caption": "Paste", "tag": "clipboard.paste", "itemType": "large", "iconKey": "paste", "tooltipText": "Paste from clipboard" },
+            { "caption": "Cut", "tag": "clipboard.cut", "itemType": "small", "iconKey": "cut" },
+            { "caption": "Copy", "tag": "clipboard.copy", "itemType": "small", "iconKey": "copy" },
+            { "caption": "Copy path", "tag": "clipboard.copy_path", "itemType": "small", "iconKey": "copy-path" }
+          ]
+        },
+        {
+          "caption": "Organize",
+          "items": [
+            {
+              "caption": "Delete",
+              "tag": "organize.delete",
+              "itemType": "splitbutton",
+              "iconKey": "delete",
+              "menuItems": [
+                { "caption": "Recycle", "tag": "organize.delete.recycle" },
+                { "caption": "Permanently delete", "tag": "organize.delete.permanent" }
+              ]
+            },
+            { "caption": "Rename", "tag": "organize.rename", "itemType": "small", "iconKey": "rename" }
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "View",
+      "groups": [
+        {
+          "caption": "Panes",
+          "items": [
+            {
+              "caption": "Navigation pane",
+              "tag": "view.nav",
+              "itemType": "splitbutton",
+              "iconKey": "nav-pane",
+              "menuItems": [
+                { "caption": "Navigation pane", "tag": "view.nav.toggle" },
+                { "caption": "Expand to open folder", "tag": "view.nav.expand" }
+              ]
+            },
+            { "caption": "Preview pane", "tag": "view.preview", "itemType": "toggle", "isToggleActive": false, "iconKey": "preview-pane" },
+            { "caption": "Details pane", "tag": "view.details", "itemType": "toggle", "isToggleActive": false, "iconKey": "details-pane" }
+          ]
+        },
+        {
+          "caption": "Show/hide",
+          "items": [
+            { "caption": "File name extensions", "tag": "view.ext", "itemType": "checkbox", "isToggleActive": false },
+            { "caption": "Hidden items", "tag": "view.hidden", "itemType": "checkbox", "isToggleActive": true },
+            { "itemType": "separator" },
+            { "caption": "Hide selected items", "tag": "view.hide", "itemType": "small", "iconKey": "hide" }
+          ]
+        }
+      ]
+    },
+    {
+      "caption": "Format",
+      "isContextual": true,
+      "contextGroup": "Picture Tools",
+      "accentColor": 4278255474,
+      "groups": [
+        {
+          "caption": "Picture Styles",
+          "items": [
+            { "caption": "Crop", "tag": "pic.crop", "itemType": "large", "iconKey": "crop" }
+          ]
+        }
+      ]
+    }
+  ]
+}

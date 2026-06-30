@@ -1,0 +1,22 @@
+name: jaspr_ribbon_workspace
+description: "jaspr-ribbon-toolbar — an MS Office–style ribbon toolbar component for Jaspr, cloned from the Xojo XjRibbon project, plus a standalone visual designer and a .ribbon LSP server."
+publish_to: none
+homepage: https://github.com/jedt3d/jaspr-ribbon-toolbar
+repository: https://github.com/jedt3d/jaspr-ribbon-toolbar
+issue_tracker: https://github.com/jedt3d/jaspr-ribbon-toolbar/issues
+
+environment:
+  sdk: ^3.8.0
+
+workspace:
+  - packages/jaspr_ribbon_toolbar
+  - packages/jaspr_ribbon_lsp
+  - apps/jaspr_ribbon_example
+  - apps/jaspr_ribbon_designer
+  - tutorial/_tool
+  - tutorial/01-basic-app
+  - tutorial/02-events-app
+  - tutorial/03-change-request-app
+
+dev_dependencies:
+  jaspr_lints: ^0.7.1

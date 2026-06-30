@@ -1,0 +1,39 @@
+{
+  "name": "jaspr-ribbon-toolbar-lsp",
+  "displayName": "jaspr-ribbon-toolbar LSP",
+  "description": "Language server for .ribbon JSON bundles (jaspr-ribbon-toolbar): validation, autocomplete for itemType/iconKey, hover docs.",
+  "version": "0.1.0",
+  "publisher": "worajedt",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Programming Languages", "Linters"],
+  "activationEvents": ["onLanguage:ribbon"],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "ribbon",
+        "aliases": ["Ribbon bundle", "ribbon"],
+        "extensions": [".ribbon"],
+        "firstLine": "^\\s*\\{\\s*\"version\"\\s*:\\s*\"2\\.0\""
+      }
+    ],
+    "configuration": {
+      "title": "jaspr-ribbon-toolbar LSP",
+      "properties": {
+        "jasprRibbonLsp.dartPath": {
+          "type": "string",
+          "default": "dart",
+          "description": "Path to the Dart executable used to launch the server."
+        },
+        "jasprRibbonLsp.serverPath": {
+          "type": "string",
+          "default": "",
+          "description": "Absolute path to packages/jaspr_ribbon_lsp/bin/jaspr_ribbon_lsp.dart. Leave empty to use the bundled default."
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  }
+}

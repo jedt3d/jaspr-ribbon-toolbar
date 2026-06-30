@@ -1,0 +1,13 @@
+name: tutorial_tool
+description: "Generates the .ribbon bundles for the runnable tutorial apps, with icons embedded as data URLs."
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.8.0
+
+resolution: workspace
+
+dependencies:
+  jaspr_ribbon_toolbar:
+    path: ../../packages/jaspr_ribbon_toolbar
