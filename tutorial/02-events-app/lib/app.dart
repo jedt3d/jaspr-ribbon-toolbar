@@ -13,8 +13,10 @@ class App extends StatelessComponent {
     return const div([
       h1([Component.text('Tutorial 2 — Events, toggles & contextual tabs')]),
       p(classes: 'lead', [
-        Component.text('Buttons fire ItemPressed; split ▾ menus fire DropdownMenuAction; '
-            'toggles & checkboxes keep state; the Format tab is contextual. Use the buttons below.'),
+        Component.text(
+          'Buttons fire ItemPressed; split ▾ menus fire DropdownMenuAction; '
+          'toggles & checkboxes keep state; the Format tab is contextual. Use the buttons below.',
+        ),
       ]),
       div(classes: 'toolbar', [
         RibbonToolbar(

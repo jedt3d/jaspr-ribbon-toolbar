@@ -1,6 +1,6 @@
 name: jaspr_ribbon_toolbar
 description: "An MS Office–style ribbon toolbar component for Jaspr web apps, rendered to an HTML5 <canvas>. Ported from the Xojo XjRibbon library. Supports tabs, groups, large/small/dropdown/split/toggle/checkbox/separator items, contextual tabs, collapse, dark mode, and SVG/PNG icons."
-version: 0.5.0
+version: 0.5.1
 homepage: https://github.com/jedt3d/jaspr-ribbon-toolbar
 repository: https://github.com/jedt3d/jaspr-ribbon-toolbar
 issue_tracker: https://github.com/jedt3d/jaspr-ribbon-toolbar/issues

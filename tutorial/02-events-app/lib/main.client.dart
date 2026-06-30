@@ -108,7 +108,9 @@ void buildControls() {
   final ctxBtn = button('🖼 Show "Picture Tools" tab');
   ctxBtn.onClick.listen((_) {
     final visible = _ribbon?.toggleContextGroup('Picture Tools') ?? false;
-    ctxBtn.textContent = visible ? '🖼 Hide "Picture Tools" tab' : '🖼 Show "Picture Tools" tab';
+    ctxBtn.textContent = visible
+        ? '🖼 Hide "Picture Tools" tab'
+        : '🖼 Show "Picture Tools" tab';
   });
 
   bar.append(darkBtn);

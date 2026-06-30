@@ -14,8 +14,10 @@ class App extends StatelessComponent {
     return const div([
       h1([Component.text('Tutorial 3 — Change request (CR-1042)')]),
       p(classes: 'lead', [
-        Component.text('Insert → Table opens a dialog; Copy file fires its renamed tag; '
-            'Hidden items toggles the greyed entries below; the ribbon follows the page scheme.'),
+        Component.text(
+          'Insert → Table opens a dialog; Copy file fires its renamed tag; '
+          'Hidden items toggles the greyed entries below; the ribbon follows the page scheme.',
+        ),
       ]),
       div(classes: 'toolbar', [
         RibbonToolbar(

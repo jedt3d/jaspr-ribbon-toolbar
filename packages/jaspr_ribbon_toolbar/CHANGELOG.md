@@ -6,6 +6,12 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.5.1] — 2026-06-30
+
+- Package README updated: designer screenshot + clear scope statement
+  (component-only; designer is a separate download from GitHub Releases).
+- Tutorial files formatted (CI compliance).
+
 ## [0.5.0] — 2026-06-30
 
 First tagged release. The full MS Office–style canvas ribbon for Jaspr, the

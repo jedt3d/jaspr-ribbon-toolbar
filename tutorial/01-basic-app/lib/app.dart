@@ -13,8 +13,10 @@ class App extends StatelessComponent {
     return const div([
       h1([Component.text('Tutorial 1 — Embed the ribbon')]),
       p(classes: 'lead', [
-        Component.text('A canvas ribbon loaded at runtime from a .ribbon bundle. '
-            'Click around — every interaction is logged below.'),
+        Component.text(
+          'A canvas ribbon loaded at runtime from a .ribbon bundle. '
+          'Click around — every interaction is logged below.',
+        ),
       ]),
       div(classes: 'toolbar', [
         RibbonToolbar(
