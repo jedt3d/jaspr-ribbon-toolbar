@@ -2,6 +2,11 @@ name: Publish to pub.dev
 
 # Triggers when you push a tag like v0.5.0, v0.6.0, v1.0.0-dev.1
 # or manually from the Actions tab.
+#
+# This workflow does TWO things in sync:
+#   1. Publishes the package to pub.dev (OIDC auth, no secret needed)
+#   2. Creates a GitHub release with auto-generated notes
+# This ensures pub.dev and GitHub releases never drift apart.
 on:
   push:
     tags:
@@ -11,18 +16,25 @@ on:
 jobs:
   publish:
     permissions:
-      id-token: write  # Required for OIDC token exchange with pub.dev
+      id-token: write   # Required for OIDC token exchange with pub.dev
+      contents: write   # Required to create GitHub releases
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - uses: dart-lang/setup-dart@v1
         with:
-          oidc: true  # OIDC-based auth — no PUB_TOKEN secret needed
+          oidc: true    # OIDC-based auth — no PUB_TOKEN secret needed
 
       - name: Resolve dependencies
         run: dart pub get
 
-      - name: Publish
+      - name: Publish to pub.dev
         run: dart pub publish --force
         working-directory: packages/jaspr_ribbon_toolbar
+
+      - name: Create GitHub release
+        if: success()
+        run: gh release create "$GITHUB_REF_NAME" --generate-notes --latest --title "$GITHUB_REF_NAME"
+        env:
+          GH_TOKEN: ${{ github.token }}

@@ -1,11 +1,11 @@
 # jaspr-ribbon-toolbar
 
-[![Pub](https://img.shields.io/badge/pub-0.5.0-blue)](https://pub.dev/packages/jaspr_ribbon_toolbar)
+[![Pub](https://img.shields.io/badge/pub-0.5.1-blue)](https://pub.dev/packages/jaspr_ribbon_toolbar)
 [![verify](https://img.shields.io/badge/make%20verify-ALL%20GREEN-brightgreen)](Makefile)
 [![Dart](https://img.shields.io/badge/Dart-%5E3.8-blue)](https://dart.dev)
 [![Jaspr](https://img.shields.io/badge/Jaspr-0.23-5647C8)](https://jaspr.site)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![Release](https://img.shields.io/badge/release-v0.5.0-blue)](https://github.com/jedt3d/jaspr-ribbon-toolbar/releases/tag/v0.5.0)
+[![Release](https://img.shields.io/badge/release-v0.5.1-blue)](https://github.com/jedt3d/jaspr-ribbon-toolbar/releases/tag/v0.5.1)
 
 An **MS Office–style ribbon toolbar** component for [Jaspr](https://jaspr.site/)
 web apps, rendered to an HTML5 `<canvas>`. It is a **direct port** of the Xojo
