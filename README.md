@@ -1,5 +1,6 @@
 # jaspr-ribbon-toolbar
 
+[![Pub](https://img.shields.io/badge/pub-0.5.0-blue)](https://pub.dev/packages/jaspr_ribbon_toolbar)
 [![verify](https://img.shields.io/badge/make%20verify-ALL%20GREEN-brightgreen)](Makefile)
 [![Dart](https://img.shields.io/badge/Dart-%5E3.8-blue)](https://dart.dev)
 [![Jaspr](https://img.shields.io/badge/Jaspr-0.23-5647C8)](https://jaspr.site)
