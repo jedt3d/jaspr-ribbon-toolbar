@@ -7,7 +7,7 @@
 DART := dart
 MEMBERS := packages/jaspr_ribbon_toolbar packages/jaspr_ribbon_lsp
 
-.PHONY: help pub-get fmt fmt-check analyze test verify docs lint-ribbon clean doctor serve-example
+.PHONY: help pub-get fmt fmt-check analyze test verify docs lint-ribbon clean doctor serve-example sync-version
 
 help: ## Show this help
 	@awk 'BEGIN{FS=":.*##"} /^[a-zA-Z_-]+:.*##/ {printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -37,6 +37,12 @@ docs: ## Generate API reference into api/ (jaspr_ribbon_toolbar package)
 lint-ribbon: ## Validate .ribbon bundles: make lint-ribbon FILE=examples/explorer.ribbon
 	@if [ -z "$(FILE)" ]; then echo "Usage: make lint-ribbon FILE=path/to/x.ribbon"; exit 64; fi
 	@bash tool/lint-ribbon.sh "$(FILE)"
+
+sync-version: ## Sync apps/jaspr_ribbon_designer/lib/version.dart from its pubspec
+	@v=$$(grep '^version:' apps/jaspr_ribbon_designer/pubspec.yaml | cut -d' ' -f2) && \
+		printf '/// Auto-synced from pubspec.yaml by `make sync-version`.\nconst String appVersion = '"'"'%s'"'"';\n' "$$v" \
+		> apps/jaspr_ribbon_designer/lib/version.dart && \
+		echo "synced version.dart -> $$v"
 
 clean: ## Remove build artifacts
 	$(DART) pub global deactivate jaspr_cli 2>/dev/null || true

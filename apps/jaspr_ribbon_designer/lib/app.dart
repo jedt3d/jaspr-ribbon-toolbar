@@ -1,6 +1,8 @@
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 
+import 'version.dart';
+
 /// The designer shell — three vertical rows: a full-width live preview, a
 /// toolbar, and a 3-pane (structure · inspector · icons) work area. All
 /// interactivity is wired imperatively from `main.client.dart` (see `Designer`).
@@ -80,7 +82,7 @@ class App extends StatelessComponent {
       // Status bar
       div(classes: 'statusbar', [
         span(id: 'status', [Component.text('Ready.')]),
-        span([Component.text('jaspr-ribbon-toolbar designer · v0.5')]),
+        span([Component.text('jaspr-ribbon-toolbar designer · v$appVersion')]),
       ]),
     ]);
   }
